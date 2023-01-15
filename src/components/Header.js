@@ -13,7 +13,21 @@ function Header() {
                         <ul id="menu">
                             <li>De K Stichting</li>
                             <li>Agenda</li>
-                            <li>Residentie de Rooie Haen</li>
+                            
+                                <div id="dropdown">
+
+                                <button id="button">Residentie de Rooie Haen</button>
+                               
+
+                                <div id="dropdown-content">
+                                <a href="resident1">ala</a>
+                                <a href="resident2">mala</a>
+                                <a href="resident3">bims</a>
+                                </div>
+
+                                </div>
+                                
+                            
                             <li>Archief</li>
                             <li>Kontakt</li>
                         </ul>
