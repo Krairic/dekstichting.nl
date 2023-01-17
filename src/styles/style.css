@@ -1,0 +1,48 @@
+body {
+    font-family: 'roboto slab', sans sarif;
+    margin: 0;
+    background-color: rgb(255, 215, 134);
+}
+
+.artistcard {
+    width: 40%;
+    display: inline-block;
+    margin: 30px;
+    position: relative;
+    height: 640px;
+    vertical-align: top;
+    padding: 10px;
+}
+
+.genre {
+    color: gray;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.name {
+    margin-top: 0;
+    width: 400px;
+    margin-bottom: 0;
+}
+
+.instaHandle {
+    color: gray;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.link-wrapper {
+    margin-top: 0;
+}
+
+.website {
+    color: gray;
+    margin-top: 0;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.image {
+    width: 400px;
+}
