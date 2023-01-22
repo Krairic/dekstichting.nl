@@ -46,3 +46,8 @@ body {
 .image {
     width: 400px;
 }
+
+.contact--wrapper {
+    margin-left: 40px;
+    margin-top: 40px;
+}

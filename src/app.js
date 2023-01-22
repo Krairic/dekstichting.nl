@@ -1,17 +1,32 @@
 import React from "react";
 import "./styles/style.css"
-import "./styles/header-style.css"
+import "./styles/header.css"
+import "./styles/home.css"
+import "./styles/agenda.css"
+import "./styles/archief.css"
 import Header from "./components/Header";
-import Main from "./components/Main";
 import "./images/Logo-transparant-white.png"
 import TopImage from "./components/top-image";
+import { Routes, Route } from "react-router-dom";
+import Contact from "./pages/Contact";
+import Agenda from "./pages/Agenda";
+import Archief from "./pages/Archief";
+import Residentie from "./pages/Residentie";
+import Home from "./pages/Home";
 
 export default function App() {
     return (
         <div className="global-wrapper">
-        <TopImage />
-        <Header />
-        <Main />
+        <TopImage/> 
+        <Header /> 
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/agenda" element={<Agenda />} />
+            <Route path="/residentie" element={<Residentie />} />
+            <Route path="/archief" element={<Archief />} />
+            <Route path='/contact' element={<Contact />} />
+        </Routes>
         </div>
     )
 }
+
