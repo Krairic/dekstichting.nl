@@ -1,0 +1,75 @@
+#residentie--introWrapper {
+    margin-left: 40px;
+    margin-top: 30px;
+}
+
+.artistcard {
+    width: 40%;
+    display: inline-block;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    height: 640px;
+    vertical-align: top;
+    padding: 10px;
+}
+
+#residentie--artistCardWrapper {
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.genre {
+    color: black;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.name {
+    color: black;
+    margin-top: 0;
+    width: 400px;
+    margin-bottom: 0;
+}
+
+.instaHandle {
+    color: black;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.link-wrapper {
+    margin-top: 0;
+}
+
+.website {
+    color: black;
+    margin-top: 0;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.image {
+    width: 400px;
+    margin-left: 20px;
+    margin-top: 20px;
+    transition: width 1s;
+}
+
+.image:hover {
+    width: 500px;
+}
+
+.contact--wrapper {
+    margin-left: 40px;
+    margin-top: 30px;
+}
+
+#contact--socialLinks {
+    color: rgb(43, 45, 66);
+}
+
+#residentie--years {
+    margin-left: 25%;
+    margin-bottom: 0px;
+}
