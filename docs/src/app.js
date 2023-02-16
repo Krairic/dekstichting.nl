@@ -16,7 +16,6 @@ import Home from "./pages/Home";
 export default function App() {
     return (
         <div className="global-wrapper">
-            React test
         <Header /> 
         <Routes>
             <Route path="/docs/" element={<Home />} />
