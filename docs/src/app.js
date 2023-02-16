@@ -18,7 +18,7 @@ export default function App() {
         <div className="global-wrapper">
         <Header /> 
         <Routes>
-            <Route path="/docs/" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/agenda" element={<Agenda />} />
             <Route path="/residentie" element={<Residentie />} />
             <Route path="/archief" element={<Archief />} />
