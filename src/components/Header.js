@@ -18,22 +18,20 @@ function Header() {
                     <Link to="/"><h1 id="title">DeKStichting</h1></Link>
                     <h4>
                         <ul id="menu">
-                            <li><Link to="/">De K Stichting</Link></li>
-                            <li><Link to="/agenda">Agenda</Link></li>
-                            <li><Link to="/residentie">Residentie de Rooie Haen</Link></li>      
-                                <div id="dropdown">
-                                <button id="button"><li id="header--listArchief"><Link to="/archief">Archief</Link></li></button>
+                        <li id="header--listLink"><Link to="/">De K Stichting</Link></li>
+                            <li id="header--listLink"><Link to="/agenda">Agenda</Link></li>
+                            <li id="header--listLink"><Link to="/residentie">Residentie de Rooie Haen</Link></li>      
+                            <div id="dropdown">
+                            <button id="button"><li id="header--listArchief"><Link to="/archief">Archief</Link></li></button>
                                 <div id="dropdown-content">
                                 {artistData.map(item => {
-                                    return (
-                                        
-                                        <HashLink to={"/archief#"+ item.id}> <p id="header--artistLink">{item.name}</p></HashLink>
-                                        
+                                    return (                         
+                                        <HashLink to={"/archief#"+ item.id}> <p id="header--artistLink">{item.name}</p></HashLink>                                      
                                     )
                                 })}
                                 </div>
                                 </div>
-                            <li><Link to="/kontakt">Kontakt</Link></li>
+                            <li id="header--listLink"><Link to="/kontakt">Kontakt</Link></li>
                         </ul>
                     </h4>
                 </header>
