@@ -1,7 +1,7 @@
 html,
 body {
     height: 100%;
-    margin: 0;
+    margin: 0 auto;
 }
 
 #nav-container {
@@ -13,14 +13,14 @@ body {
 
 #nav {
     display: flex;
-    width: 100%;
+    min-width: 100%;
     align-items: center;
     /* background-image: url("../images/header-background.png");
     background-repeat: none;
     background-size: cover; */
-    background-color: rgb(43, 45, 66);
     justify-content: space-between;
-    height: 80px;
+    max-height: 80px;
+    background-color: rgb(43, 45, 66);
     box-shadow: 0px 5px 5px rgb(40, 40, 40);
 }
 
@@ -30,9 +30,57 @@ body {
     align-items: center;
 }
 
+.header--hamburger{
+    margin: 0 0 0 20px;
+    border: 3px solid rgb(129, 138, 163);
+    border-radius: 5px;
+}
+
+.header--hamburgerButton {
+    background-color: transparent;
+    border: none;
+}
+
+.header--hamburger :is(.hamburger1, .hamburger2, .hamburger3) {
+    fill: rgb(129, 138, 163);
+    transition: 
+        y 300ms ease-in 300ms,
+        transform 300ms ease-in,
+        visibility 0ms 300ms
+    ;
+    transform-origin: center;
+}
+
+
+.header--hamburger:hover :is(.hamburger1, .hamburger2, .hamburger3) {
+    transition: 
+        y 300ms ease-in,
+        transform 300ms ease-in 300ms,
+        visibility 0ms 300ms
+    ;
+}
+
+.header--hamburger:hover :is(.hamburger1, .hamburger3) {
+    y: 45;
+}
+
+.header--hamburger:hover .hamburger2 {
+    visibility: hidden;
+}
+
+.header--hamburger:hover .hamburger1 {
+    transform: rotate(45deg);
+}
+
+.header--hamburger:hover .hamburger3 {
+    transform: rotate(-45deg);
+}
+
 
 #title {
     display: flex;
+    max-width: 253px;
+    min-width: 0px;
     color: rgb(129, 138, 163);
     font-size: 2.5em;
     margin-left: 50px;
@@ -61,7 +109,8 @@ body {
 
 
 #logo {
-    height: 60px;
+    min-height: 20px;
+    max-height: 80px;
     margin-left: 30px;
     padding-top: 4px;
 }
@@ -73,7 +122,7 @@ body {
 
 #dropdown-content {
     border-radius: 5px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'roboto slab', sans-serif;
     background-color: rgb(43, 45, 66);
     width: 200%;
     overflow: auto;
@@ -82,15 +131,17 @@ body {
     padding-left: 10px;
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0.3s, opacity 0.3s;
+    transition: 
+        visibility 10s, 
+        opacity 0.3s;
 }
 
 #dropdown:hover #dropdown-content {
-    opacity: 0.8;
+    opacity: 1;
     visibility: visible;
     transform: translateY(10px);
     border-radius: 3px;
-    padding: 5px;
+    padding: 5px 0 0 0;
 }
 
 #header--artistLink {
@@ -112,7 +163,7 @@ body {
     font-size: 16px;
     color: rgb(129, 138, 163);
     font-family: 'roboto slab', sans-serif;
-    font-weight: 700;
+    font-weight: 400;
     background-color: rgb(43, 45, 66);
     border: none;
     transition: transform 1s;
@@ -136,10 +187,38 @@ a:link {
     transform: translateY(5px);
 }
 
-a:visited, a:active {
+a:visited, a:active, a:link {
     color: rgb(129, 138, 163);
 }
 
 #title:hover {
     transform: none;
+}
+
+.header--mobMenu {
+    opacity: 0;
+    background-color: rgba(43, 45, 66, 0.914);
+    position: fixed;
+    left: 0;
+    top: 80px;
+    height: 80%;
+    border-top-right-radius: 5px;
+}
+
+.header--mobMenuWrapper > li {
+    list-style: none;
+    padding-right: 20px;
+    padding-top: 30px;
+}
+
+@media screen and (max-width: 767px) {
+    #logo, 
+    #title, 
+    #menu {display: none;}
+    .header--mobMenu {opacity: 1;}
+}
+
+@media screen and (min-width: 767px) {
+    .header--hamburger {display: none;}
+
 }

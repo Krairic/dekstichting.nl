@@ -27,10 +27,10 @@
 
 .expo-image {
     margin: 10px;
-    width: 400px;
-    transition: width 1s;
+    max-width: 400px;
+    transition: max-width 1s;
 }
 
 .expo-image:hover {
-    width: 550px;
+    max-width: 550px;
 }

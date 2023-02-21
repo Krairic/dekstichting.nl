@@ -6,7 +6,12 @@ import { HashLink } from "react-router-hash-link";
 
 function Header() {
 
-    
+let [openMob, setOpenMob] = React.useState(false)
+
+function openMobMenu() {
+    setOpenMob(prevOpenMob => !prevOpenMob)
+}
+
     return (
         <div id="nav-container">
             <div id="top-image-container">
@@ -14,9 +19,28 @@ function Header() {
             <nav id="nav">
                 <div id="header--wrapper">
                 <header id="header">
+                    <button className="header--hamburgerButton" onClick={openMobMenu}>
+                    <svg viewBox="0 0 100 100" width="50px" className="header--hamburger">
+                        <rect className="hamburger1" 
+                        width="80" height="10" 
+                        x="10"
+                        y="15" 
+                        rx="2"></rect>
+                        <rect className="hamburger2" 
+                        width="80" height="10" 
+                        x="10"
+                        y="45" 
+                        rx="2"></rect>
+                        <rect className="hamburger3" 
+                        width="80" height="10" 
+                        x="10"
+                        y="75" 
+                        rx="2"></rect>
+                    </svg>
+                    </button>
                     <Link to="/"><img src={logo} alt="logo" id="logo" /></Link>
                     <Link to="/"><h1 id="title">DeKStichting</h1></Link>
-                    <h4>
+                    
                         <ul id="menu">
                         <li id="header--listLink"><Link to="/">De K Stichting</Link></li>
                             <li id="header--listLink"><Link to="/agenda">Agenda</Link></li>
@@ -33,7 +57,15 @@ function Header() {
                                 </div>
                             <li id="header--listLink"><Link to="/kontakt">Kontakt</Link></li>
                         </ul>
-                    </h4>
+                    {openMob===true && <div className="header--mobMenu">
+                        <ul className="header--mobMenuWrapper">
+                            <li id="header--listLink"><Link to="/">De K Stichting</Link></li>
+                            <li id="header--listLink"><Link to="/agenda">Agenda</Link></li>
+                            <li id="header--listLink"><Link to="/residentie">Residentie de Rooie Haen</Link></li>
+                            <li id="header--listArchief"><Link to="/archief">Archief</Link></li>
+                            <li id="header--listLink"><Link to="/kontakt">Kontakt</Link></li>
+                        </ul>
+                    </div>}
                 </header>
                 </div>
             </nav>
