@@ -6,7 +6,7 @@ import "./styles/archief.css"
 import "./styles/residentie.css"
 import Header from "./components/Header";
 import "./images/Logo-transparant-white.png"
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, redirect } from "react-router-dom";
 import Contact from "./pages/Contact";
 import Agenda from "./pages/Agenda";
 import Archief from "./pages/Archief";
@@ -19,6 +19,7 @@ export default function App() {
         <Header /> 
         <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="*" element={<redirect to="/" />} />
             <Route path="/agenda" element={<Agenda />} />
             <Route path="/residentie" element={<Residentie />} />
             <Route path="/archief" element={<Archief />} />

@@ -15,3 +15,18 @@ body {
     background-color: white;
 }
 
+.home--logo {
+    max-width: 75px;
+    padding-left: 30px;
+}
+
+.home--footer {
+    display: inline-block;
+    bottom: 0;
+    float: right;
+    /* border: red solid; */
+    max-width: 50%;
+    left: 100%;
+}
+
+
